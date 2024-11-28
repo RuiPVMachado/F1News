@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Fan Hub - Race Schedule</title>
+    <meta name="description" content="View the upcoming F1 race schedule and countdown to the next race.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <header class="bg-red-600 p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-bold">F1 News</a>
+            <div class="space-x-4">
+                <a href="home.html" class="hover:text-gray-200">Home</a>
+                <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
+                <a href="standings.html" class="hover:text-gray-200">Standings</a>
+                <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
+                <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-8 px-4">
+        <h1 class="text-3xl font-bold mb-8">F1 Race Schedule</h1>
+
+        <div class="card bg-gray-800 mb-8">
+            <div class="card-header">
+                <h2 class="card-title">Next Race Countdown</h2>
+            </div>
+            <div class="card-content">
+                <h2 id="next-race-name" class="text-2xl font-bold mb-4"></h2>
+                <p id="next-race-date" class="mb-4"></p>
+                <div id="countdown-timer" class="grid grid-cols-4 gap-4 text-center">
+                    <div>
+                        <div id="days" class="text-4xl font-bold">0</div>
+                        <div class="text-sm">Days</div>
+                    </div>
+                    <div>
+                        <div id="hours" class="text-4xl font-bold">0</div>
+                        <div class="text-sm">Hours</div>
+                    </div>
+                    <div>
+                        <div id="minutes" class="text-4xl font-bold">0</div>
+                        <div class="text-sm">Minutes</div>
+                    </div>
+                    <div>
+                        <div id="seconds" class="text-4xl font-bold">0</div>
+                        <div class="text-sm">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-gray-800">
+            <div class="card-header">
+                <h2 class="card-title">2024 Race Calendar</h2>
+            </div>
+            <div class="card-content">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Grand Prix</th>
+                                <th>Location</th>
+                                <th>Time (UTC)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="race-schedule">
+                            <!-- Race schedule will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 F1 News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Fan Hub - Home</title>
+    <meta name="description" content="Welcome to F1 Fan Hub - Your ultimate source for Formula 1 news, race schedules, driver profiles, and team information.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <header class="bg-red-600 p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="home.html" class="text-2xl font-bold">F1 News</a>
+            <div class="space-x-4">
+                <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
+                <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
+                <a href="standings.html" class="hover:text-gray-200">Standings</a>
+                <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
+                <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <main class="container mx-auto mt-8 px-4">
+        <section aria-label="Featured F1 News" class="relative mb-12">
+            <div id="banner-container" class="relative h-[600px] w-full overflow-hidden rounded-lg">
+                <div class="banner-slide">
+                    <img src="banners/monaco.png" alt="Latest F1 Grand Prix" class="w-full h-full object-cover">
+                    <div class="banner-text">
+                        <h2 class="text-2xl font-bold">Exciting finish at the Monaco Grand Prix!</h2>
+                    </div>
+                </div>
+                <div class="banner-slide hidden">
+                    <img src="banners/hamilton.png" alt="F1 Driver Spotlight" class="w-full h-full object-cover">
+                    <div class="banner-text">
+                        <h2 class="text-2xl font-bold">Lewis Hamilton aims for record-breaking 8th championship</h2>
+                    </div>
+                </div>
+                <div class="banner-slide hidden">
+                    <img src="banners/ferrari.png" alt="F1 Team Updates" class="w-full h-full object-cover">
+                    <div class="banner-text">
+                        <h2 class="text-2xl font-bold">Ferrari unveils upgrades for upcoming race</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="quick-access-heading" class="mb-12">
+            <h2 id="quick-access-heading" class="text-2xl font-bold mb-4 text-center">Quick Access</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card bg-gray-800">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-semibold mb-2">Race Schedule</h3>
+                        <p class="mb-4">View upcoming races and events in the F1 calendar.</p>
+                        <a href="schedule.html" class="button">View Schedule</a>
+                    </div>
+                </div>
+                <div class="card bg-gray-800">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-semibold mb-2">F1 Pilots</h3>
+                        <p class="mb-4">Explore profiles of current Formula 1 drivers.</p>
+                        <a href="pilots.html" class="button">See Drivers</a>
+                    </div>
+                </div>
+                <div class="card bg-gray-800">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-semibold mb-2">Standings</h3>
+                        <p class="mb-4">Stay updated with the latest F1 standings.</p>
+                        <a href="standings.html" class="button">View Standings</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="f1-overview-heading" class="mb-12">
+            <h2 id="f1-overview-heading" class="text-2xl font-bold mb-4 text-center">F1 Season Overview</h2>
+            <div class="card bg-gray-800">
+                <div class="p-6 text-center">
+                    <p class="mb-4">
+                        The 2024 Formula 1 season promises to be one of the most exciting yet, with 24 races
+                        scheduled across 21 countries. Defending champion Max Verstappen faces stiff competition
+                        from Lewis Hamilton, Charles Leclerc, and a host of talented drivers vying for the title.
+                    </p>
+                    <p>
+                        With new technical regulations in place and teams pushing the boundaries of innovation,
+                        this season is set to deliver thrilling races and unexpected twists. Stay tuned for
+                        all the latest updates and analysis as the drama unfolds on and off the track.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 F1 News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
+

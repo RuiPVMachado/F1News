@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Loading Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a202c;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Race track */
+        .race-track {
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #4a5568;
+        }
+
+        /* F1 Car */
+        .f1-car {
+            position: absolute;
+            bottom: -8.5%;
+            width: 700px;
+            height: 400px;
+            transform: translateY(-50%);
+            left: -15%;
+            transition: transform 2s ease-out;
+        }
+
+        .f1-car.race {
+            transform: translateY(-50%) translateX(2700px);
+        }
+
+        .car-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Race lights */
+        .race-lights {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .light {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #333;
+            transition: background-color 0.2s ease;
+        }
+
+        .light.red {
+            background-color: #ff0000;
+        }
+
+        .light.green {
+            background-color: #00ff00;
+        }
+
+        /* Welcome message */
+        .welcome-message {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: none;
+        }
+
+        .welcome-message.visible {
+            opacity: 1;
+            display: block;
+        }
+
+        .welcome-message h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-message p {
+            color: #cbd5e0;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add audio element -->
+    <audio id="carSound" preload="auto">
+        <source src="f1-sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="loading-container" id="loadingContainer">
+        <div class="race-track"></div>
+        
+        <div class="f1-car" id="f1Car">
+            <img src="f1.png" alt="F1 Car" class="car-img">
+        </div>
+
+        <div class="race-lights">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+    </div>
+
+    <div class="welcome-message" id="welcomeMessage">
+        <h1>Welcome to F1 News</h1>
+        <p>Your pit stop for the latest Formula 1 updates</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lights = document.querySelectorAll('.light');
+            const loadingContainer = document.getElementById('loadingContainer');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const f1Car = document.getElementById('f1Car');
+            const carSound = document.getElementById('carSound');
+            let lightCount = 0;
+
+            // Function to activate lights faster (300ms between lights)
+            function activateLight() {
+                if (lightCount < lights.length) {
+                    lights[lightCount].classList.add('red');
+                    lightCount++;
+                    
+                    if (lightCount === lights.length) {
+                        // Turn all lights green and start the race immediately
+                        setTimeout(() => {
+                            lights.forEach(light => {
+                                light.classList.remove('red');
+                                light.classList.add('green');
+                            });
+                            // Start the car right after lights turn green
+                            f1Car.classList.add('race');
+                            // Play the car sound
+                            carSound.play();
+                        }, 300);
+                    }
+                }
+            }
+
+            // Start light sequence with shorter intervals (300ms)
+            const lightInterval = setInterval(activateLight, 300);
+
+            // End loading sequence and redirect to index.html
+            setTimeout(() => {
+                clearInterval(lightInterval);
+                loadingContainer.style.display = 'none';
+                welcomeMessage.classList.add('visible');
+                
+                // Add a small delay before redirecting
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 2000);
+            }, 4000);
+        });
+    </script>
+</body>
+</html>

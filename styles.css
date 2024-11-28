@@ -1,0 +1,438 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #dc2626;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e5e7eb;
+}
+
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+/* Main content styles */
+main {
+    margin-top: 2rem;
+    flex: 1 0 auto;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Banner styles */
+#banner-container {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+}
+
+.banner-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.banner-slide.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+/* Card styles */
+.card {
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    background-color: #4f46e5;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.button:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+/* Footer styles */
+footer {
+    background-color: #1f2937;
+    padding: 1.5rem 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Pilots page styles */
+.pilot-image {
+    position: relative;
+    height: 12rem;
+    margin-bottom: 1rem;
+}
+
+.pilot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.375rem;
+}
+
+.pilot-team {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    margin-bottom: 0.5rem;
+}
+
+.pilot-bio {
+    font-size: 0.875rem;
+}
+
+/* Schedule page styles */
+.grid-cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+}
+
+th {
+    background-color: #374151;
+    font-weight: bold;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    nav .space-x-4 {
+        display: none;
+    }
+    .mobile-menu-button {
+        display: block;
+    }
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #dc2626;
+    padding: 1rem;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Past race styling */
+.past-race {
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+/* --- New Styles Added for Standings Page --- */
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #2d3748;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #4a5568;
+}
+
+/* Tab Content Styling */
+.tab-content {
+    display: none;
+    background-color: #2d3748;
+    padding: 20px;
+    border-radius: 0 5px 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Table Styling for Standings */
+table.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table.standings-table th, table.standings-table td {
+    padding: 12px;
+    border: 1px solid #4a5568;
+    text-align: left;
+}
+
+table.standings-table th {
+    background-color: #4a5568;
+}
+
+/* Active Table Row Highlight */
+table.standings-table tr:hover {
+    background-color: #3b425e;
+}
+
+/* --- End of New Styles --- */
+
+/* Circuit buttons styling */
+.circuit-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.circuit-buttons .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    min-width: 200px;
+    border: 2px solid transparent;
+    background-color: #1e293b;
+    transition: all 0.3s ease;
+}
+
+.circuit-buttons .button:hover {
+    background-color: #2d3748;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.circuit-buttons .button.active {
+    background-color: #4f46e5;
+    border-color: #6366f1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Circuit image container */
+.circuit-image {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.circuit-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain */
+    object-position: center;
+}
+
+/* Adjust grid for circuit layout */
+@media (min-width: 768px) {
+    .md\:col-span-2 {
+        grid-column: span 2;
+    }
+}
+
+/* Update circuit layout width */
+.container.circuit-container {
+    max-width: 1400px; /* Slightly reduced from 1600px */
+    width: 90%; /* Changed from 75% to 90% for better mobile display */
+    margin: 0 auto;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .container.circuit-container {
+        width: 95%;
+    }
+    
+    .circuit-image {
+        padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.circuit-section {
+    display: block;
+}
+
+.circuit-section.hidden {
+    display: none;
+}
+
+.circuit-section .card-content ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.circuit-section .card-content ul li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.circuit-section .card-content p {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
