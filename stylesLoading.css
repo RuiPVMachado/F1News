@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a202c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.loading-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Race track */
+.race-track {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #4a5568;
+}
+
+/* F1 Car */
+.f1-car {
+  position: absolute;
+  bottom: -8.5%;
+  width: 700px;
+  height: 400px;
+  transform: translateY(-50%);
+  left: -15%;
+  transition: transform 2s ease-out;
+}
+
+.f1-car.race {
+  transform: translateY(-50%) translateX(2700px);
+}
+
+.car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Race lights */
+.race-lights {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.light {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.light.red {
+  background-color: #ff0000;
+}
+
+.light.green {
+  background-color: #00ff00;
+}
+
+/* Welcome message */
+.welcome-message {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+
+.welcome-message.visible {
+  opacity: 1;
+  display: block;
+}
+
+.welcome-message h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.welcome-message p {
+  color: #cbd5e0;
+  font-size: 1.25rem;
+}

@@ -1,303 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F1 Fan Hub - Circuits</title>
-    <meta name="description" content="Explore F1 circuits with detailed information about track features, DRS zones, and lap records.">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="min-h-screen bg-gray-900 text-white flex flex-col">
+    <meta
+      name="description"
+      content="Explore F1 circuits with detailed information about track features, DRS zones, and lap records."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-gray-900 text-white flex flex-col">
     <header class="bg-red-600 p-4">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="home.html" class="text-2xl font-bold">F1 News</a>
-            <div class="space-x-4">
-                <a href="home.html" class="hover:text-gray-200">Home</a>
-                <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
-                <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
-                <a href="standings.html" class="hover:text-gray-200">Standings</a>
-                <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto flex justify-between items-center">
+        <a href="home.html" class="text-2xl font-bold">F1 News</a>
+        <div class="space-x-4">
+          <a href="home.html" class="hover:text-gray-200">Home</a>
+          <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
+          <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
+          <a href="standings.html" class="hover:text-gray-200">Standings</a>
+          <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
+        </div>
+      </nav>
     </header>
-    <br>
-    <br>
+    <br />
+    <br />
     <main class="container circuit-container mx-auto mt-8 px-4 flex-grow">
-        <div class="circuit-buttons">
-            <button class="button active" data-circuit="monaco">Circuit de Monaco</button>
-            <button class="button" data-circuit="monza">Autodromo Nazionale Monza</button>
-            <button class="button" data-circuit="spa">Spa-Francorchamps</button>
-            <button class="button" data-circuit="silverstone">Silverstone</button>
-        </div>
+      <div class="circuit-buttons">
+        <button class="button active" data-circuit="monaco">
+          Circuit de Monaco
+        </button>
+        <button class="button" data-circuit="monza">
+          Autodromo Nazionale Monza
+        </button>
+        <button class="button" data-circuit="spa">Spa-Francorchamps</button>
+        <button class="button" data-circuit="silverstone">Silverstone</button>
+      </div>
 
-        <!-- Monaco Circuit Section -->
-        <div class="circuit-section active" id="monaco-section">
-            <div class="grid">
-                <div class="card md:col-span-2">
-                    <div class="card-header">
-                        <div class="card-title">Circuit de Monaco</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="circuit-image">
-                            <img src="circuits/Circuit_Monaco.png" alt="Circuit de Monaco map">
-                        </div>
-                        <p class="mt-4 text-left">
-                            The Monaco Grand Prix is considered one of the most prestigious automobile races in the world. 
-                            The circuit has been hosting Formula One races since 1929.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Circuit Details</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="tabs">
-                            <div class="tab active" data-tab="monaco-info">Info</div>
-                            <div class="tab" data-tab="monaco-features">Features</div>
-                            <div class="tab" data-tab="monaco-drs">DRS</div>
-                        </div>
-
-                        <div class="tab-content active" id="monaco-info">
-                            <ul>
-                                <li><strong>Length:</strong> 3.337 km</li>
-                                <li><strong>Turns:</strong> 19</li>
-                                <li><strong>Lap Record:</strong> 1:12.909 - Lewis Hamilton (2021)</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="monaco-features">
-                            <ul>
-                                <li><strong>Casino Square:</strong> Famous for its tight turn and glamorous surroundings, this iconic section challenges drivers with its precise turning requirements.</li>
-                                <li><strong>Tunnel:</strong> The fastest part of the circuit, where cars reach speeds of up to 290km/h before emerging into daylight and braking for the chicane.</li>
-                                <li><strong>Nouvelle Chicane:</strong> A key overtaking spot after the tunnel, requiring heavy braking from high speed and precise car placement.</li>
-                                <li><strong>Swimming Pool Complex:</strong> A series of quick turns next to Monaco's swimming pool, requiring maximum precision and commitment.</li>
-                                <li><strong>Rascasse:</strong> A tight hairpin that leads into the final corner, crucial for a good lap time and often a scene of race drama.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="monaco-drs">
-                            <ul>
-                                <li><strong>Zone 1:</strong> After Turn 19 to Turn 1 (510 meters)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <!-- Monaco Circuit Section -->
+      <div class="circuit-section active" id="monaco-section">
+        <div class="grid">
+          <div class="card md:col-span-2">
+            <div class="card-header">
+              <div class="card-title">Circuit de Monaco</div>
             </div>
-        </div>
-
-        <!-- Monza Circuit Section -->
-        <div class="circuit-section hidden" id="monza-section">
-            <div class="grid">
-                <div class="card md:col-span-2">
-                    <div class="card-header">
-                        <div class="card-title">Autodromo Nazionale Monza</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="circuit-image">
-                            <img src="circuits/Circuit_Monza.png" alt="Autodromo Nazionale Monza map">
-                        </div>
-                        <p class="mt-4 text-left">
-                            Known as "The Temple of Speed," Monza is the fastest circuit on the F1 calendar and has been hosting races since 1922.
-                            The circuit is famous for its high-speed nature and historic banking sections, though the latter are no longer used in F1.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Circuit Details</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="tabs">
-                            <div class="tab active" data-tab="monza-info">Info</div>
-                            <div class="tab" data-tab="monza-features">Features</div>
-                            <div class="tab" data-tab="monza-drs">DRS</div>
-                        </div>
-
-                        <div class="tab-content active" id="monza-info">
-                            <ul>
-                                <li><strong>Length:</strong> 5.793 km</li>
-                                <li><strong>Turns:</strong> 11</li>
-                                <li><strong>Lap Record:</strong> 1:21.046 - Rubens Barrichello (2004)</li>
-                                <li><strong>Average Speed:</strong> 264 km/h</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="monza-features">
-                            <ul>
-                                <li><strong>Variante del Rettifilo:</strong> First chicane after the start/finish straight, a crucial overtaking spot requiring heavy braking from over 340km/h.</li>
-                                <li><strong>Curva Grande:</strong> High-speed right-hand turn taken flat out, leading into another heavy braking zone.</li>
-                                <li><strong>Variante della Roggia:</strong> Quick chicane that requires precise car placement and good traction on exit.</li>
-                                <li><strong>Variante Ascari:</strong> Complex three-part chicane that tests both driver skill and car balance.</li>
-                                <li><strong>Parabolica:</strong> Long, sweeping final corner that leads onto the main straight, crucial for lap time and overtaking.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="monza-drs">
-                            <ul>
-                                <li><strong>Zone 1:</strong> After Turn 7 to Turn 8 (625 meters)</li>
-                                <li><strong>Zone 2:</strong> After Turn 11 to Turn 1 (1.1 kilometers)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="card-content">
+              <div class="circuit-image">
+                <img
+                  src="circuits/Circuit_Monaco.png"
+                  alt="Circuit de Monaco map"
+                />
+              </div>
+              <p class="mt-4 text-left">
+                The Monaco Grand Prix is considered one of the most prestigious
+                automobile races in the world. The circuit has been hosting
+                Formula One races since 1929.
+              </p>
             </div>
-        </div>
+          </div>
 
-        <!-- Spa Circuit Section -->
-        <div class="circuit-section hidden" id="spa-section">
-            <div class="grid">
-                <div class="card md:col-span-2">
-                    <div class="card-header">
-                        <div class="card-title">Circuit de Spa-Francorchamps</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="circuit-image">
-                            <img src="circuits/Circuit_Spa.png" alt="Circuit de Spa-Francorchamps map">
-                        </div>
-                        <p class="mt-4 text-left">
-                            Located in the Ardennes forest, Spa is known for its unpredictable weather and is considered one of the most challenging circuits in F1.
-                            The track's elevation changes and high-speed corners make it a favorite among drivers and fans alike.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Circuit Details</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="tabs">
-                            <div class="tab active" data-tab="spa-info">Info</div>
-                            <div class="tab" data-tab="spa-features">Features</div>
-                            <div class="tab" data-tab="spa-drs">DRS</div>
-                        </div>
-
-                        <div class="tab-content active" id="spa-info">
-                            <ul>
-                                <li><strong>Length:</strong> 7.004 km</li>
-                                <li><strong>Turns:</strong> 19</li>
-                                <li><strong>Lap Record:</strong> 1:46.286 - Valtteri Bottas (2018)</li>
-                                <li><strong>Elevation Change:</strong> 102 meters</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="spa-features">
-                            <ul>
-                                <li><strong>Eau Rouge-Raidillon:</strong> Iconic uphill sequence of corners taken at high speed, testing driver courage and car downforce. One of F1's most famous corner combinations.</li>
-                                <li><strong>Les Combes:</strong> Technical sequence following the Kemmel Straight, key overtaking opportunity after the high-speed run from Raidillon.</li>
-                                <li><strong>Pouhon:</strong> Fast, sweeping double-left hander that tests aerodynamic grip and driver commitment.</li>
-                                <li><strong>Blanchimont:</strong> High-speed left-hander approaching the final chicane, requires absolute precision at speeds over 300km/h.</li>
-                                <li><strong>Bus Stop Chicane:</strong> Final chicane before the start/finish straight, crucial for overtaking and lap times.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="spa-drs">
-                            <ul>
-                                <li><strong>Zone 1:</strong> After Turn 5 to Turn 6 (800 meters)</li>
-                                <li><strong>Zone 2:</strong> After Turn 19 to Turn 1 (950 meters)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Circuit Details</div>
             </div>
-        </div>
+            <div class="card-content">
+              <div class="tabs">
+                <div class="tab active" data-tab="monaco-info">Info</div>
+                <div class="tab" data-tab="monaco-features">Features</div>
+                <div class="tab" data-tab="monaco-drs">DRS</div>
+              </div>
 
-        <!-- Silverstone Circuit Section -->
-        <div class="circuit-section hidden" id="silverstone-section">
-            <div class="grid">
-                <div class="card md:col-span-2">
-                    <div class="card-header">
-                        <div class="card-title">Silverstone Circuit</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="circuit-image">
-                            <img src="circuits/Circuit_Silverstone.png" alt="Silverstone Circuit map">
-                        </div>
-                        <p class="mt-4 text-left">
-                            Silverstone hosted the first-ever Formula One World Championship race in 1950 and remains one of the fastest circuits on the calendar.
-                            Originally a World War II airfield, it has evolved into one of the most prestigious venues in motorsport.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Circuit Details</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="tabs">
-                            <div class="tab active" data-tab="silverstone-info">Info</div>
-                            <div class="tab" data-tab="silverstone-features">Features</div>
-                            <div class="tab" data-tab="silverstone-drs">DRS</div>
-                        </div>
-
-                        <div class="tab-content active" id="silverstone-info">
-                            <ul>
-                                <li><strong>Length:</strong> 5.891 km</li>
-                                <li><strong>Turns:</strong> 18</li>
-                                <li><strong>Lap Record:</strong> 1:27.097 - Max Verstappen (2020)</li>
-                                <li><strong>Average Speed:</strong> 237 km/h</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="silverstone-features">
-                            <ul>
-                                <li><strong>Copse:</strong> Ultra-fast right-hander taken at around 290km/h in qualifying, one of the fastest corners in F1.</li>
-                                <li><strong>Maggotts-Becketts-Chapel:</strong> High-speed sequence of direction changes that tests car and driver to the limit. Considered one of F1's most technical sections.</li>
-                                <li><strong>Stowe:</strong> Fast right-hander at the end of the Hangar Straight, offering overtaking opportunities under braking.</li>
-                                <li><strong>Vale and Club:</strong> Technical complex leading onto the start/finish straight, crucial for maintaining momentum.</li>
-                                <li><strong>Abbey:</strong> High-speed first corner that sets up the entire lap, taken almost flat out in modern F1 cars.</li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="silverstone-drs">
-                            <ul>
-                                <li><strong>Zone 1:</strong> After Turn 5 to Turn 6 (720 meters)</li>
-                                <li><strong>Zone 2:</strong> After Turn 14 to Turn 15 (830 meters)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              <div class="tab-content active" id="monaco-info">
+                <ul>
+                  <li><strong>Length:</strong> 3.337 km</li>
+                  <li><strong>Turns:</strong> 19</li>
+                  <li>
+                    <strong>Lap Record:</strong> 1:12.909 - Lewis Hamilton
+                    (2021)
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="monaco-features">
+                <ul>
+                  <li>
+                    <strong>Casino Square:</strong> Famous for its tight turn
+                    and glamorous surroundings, this iconic section challenges
+                    drivers with its precise turning requirements.
+                  </li>
+                  <li>
+                    <strong>Tunnel:</strong> The fastest part of the circuit,
+                    where cars reach speeds of up to 290km/h before emerging
+                    into daylight and braking for the chicane.
+                  </li>
+                  <li>
+                    <strong>Nouvelle Chicane:</strong> A key overtaking spot
+                    after the tunnel, requiring heavy braking from high speed
+                    and precise car placement.
+                  </li>
+                  <li>
+                    <strong>Swimming Pool Complex:</strong> A series of quick
+                    turns next to Monaco's swimming pool, requiring maximum
+                    precision and commitment.
+                  </li>
+                  <li>
+                    <strong>Rascasse:</strong> A tight hairpin that leads into
+                    the final corner, crucial for a good lap time and often a
+                    scene of race drama.
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="monaco-drs">
+                <ul>
+                  <li>
+                    <strong>Zone 1:</strong> After Turn 19 to Turn 1 (510
+                    meters)
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Monza Circuit Section -->
+      <div class="circuit-section hidden" id="monza-section">
+        <div class="grid">
+          <div class="card md:col-span-2">
+            <div class="card-header">
+              <div class="card-title">Autodromo Nazionale Monza</div>
+            </div>
+            <div class="card-content">
+              <div class="circuit-image">
+                <img
+                  src="circuits/Circuit_Monza.png"
+                  alt="Autodromo Nazionale Monza map"
+                />
+              </div>
+              <p class="mt-4 text-left">
+                Known as "The Temple of Speed," Monza is the fastest circuit on
+                the F1 calendar and has been hosting races since 1922. The
+                circuit is famous for its high-speed nature and historic banking
+                sections, though the latter are no longer used in F1.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Circuit Details</div>
+            </div>
+            <div class="card-content">
+              <div class="tabs">
+                <div class="tab active" data-tab="monza-info">Info</div>
+                <div class="tab" data-tab="monza-features">Features</div>
+                <div class="tab" data-tab="monza-drs">DRS</div>
+              </div>
+
+              <div class="tab-content active" id="monza-info">
+                <ul>
+                  <li><strong>Length:</strong> 5.793 km</li>
+                  <li><strong>Turns:</strong> 11</li>
+                  <li>
+                    <strong>Lap Record:</strong> 1:21.046 - Rubens Barrichello
+                    (2004)
+                  </li>
+                  <li><strong>Average Speed:</strong> 264 km/h</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="monza-features">
+                <ul>
+                  <li>
+                    <strong>Variante del Rettifilo:</strong> First chicane after
+                    the start/finish straight, a crucial overtaking spot
+                    requiring heavy braking from over 340km/h.
+                  </li>
+                  <li>
+                    <strong>Curva Grande:</strong> High-speed right-hand turn
+                    taken flat out, leading into another heavy braking zone.
+                  </li>
+                  <li>
+                    <strong>Variante della Roggia:</strong> Quick chicane that
+                    requires precise car placement and good traction on exit.
+                  </li>
+                  <li>
+                    <strong>Variante Ascari:</strong> Complex three-part chicane
+                    that tests both driver skill and car balance.
+                  </li>
+                  <li>
+                    <strong>Parabolica:</strong> Long, sweeping final corner
+                    that leads onto the main straight, crucial for lap time and
+                    overtaking.
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="monza-drs">
+                <ul>
+                  <li>
+                    <strong>Zone 1:</strong> After Turn 7 to Turn 8 (625 meters)
+                  </li>
+                  <li>
+                    <strong>Zone 2:</strong> After Turn 11 to Turn 1 (1.1
+                    kilometers)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spa Circuit Section -->
+      <div class="circuit-section hidden" id="spa-section">
+        <div class="grid">
+          <div class="card md:col-span-2">
+            <div class="card-header">
+              <div class="card-title">Circuit de Spa-Francorchamps</div>
+            </div>
+            <div class="card-content">
+              <div class="circuit-image">
+                <img
+                  src="circuits/Circuit_Spa.png"
+                  alt="Circuit de Spa-Francorchamps map"
+                />
+              </div>
+              <p class="mt-4 text-left">
+                Located in the Ardennes forest, Spa is known for its
+                unpredictable weather and is considered one of the most
+                challenging circuits in F1. The track's elevation changes and
+                high-speed corners make it a favorite among drivers and fans
+                alike.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Circuit Details</div>
+            </div>
+            <div class="card-content">
+              <div class="tabs">
+                <div class="tab active" data-tab="spa-info">Info</div>
+                <div class="tab" data-tab="spa-features">Features</div>
+                <div class="tab" data-tab="spa-drs">DRS</div>
+              </div>
+
+              <div class="tab-content active" id="spa-info">
+                <ul>
+                  <li><strong>Length:</strong> 7.004 km</li>
+                  <li><strong>Turns:</strong> 19</li>
+                  <li>
+                    <strong>Lap Record:</strong> 1:46.286 - Valtteri Bottas
+                    (2018)
+                  </li>
+                  <li><strong>Elevation Change:</strong> 102 meters</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="spa-features">
+                <ul>
+                  <li>
+                    <strong>Eau Rouge-Raidillon:</strong> Iconic uphill sequence
+                    of corners taken at high speed, testing driver courage and
+                    car downforce. One of F1's most famous corner combinations.
+                  </li>
+                  <li>
+                    <strong>Les Combes:</strong> Technical sequence following
+                    the Kemmel Straight, key overtaking opportunity after the
+                    high-speed run from Raidillon.
+                  </li>
+                  <li>
+                    <strong>Pouhon:</strong> Fast, sweeping double-left hander
+                    that tests aerodynamic grip and driver commitment.
+                  </li>
+                  <li>
+                    <strong>Blanchimont:</strong> High-speed left-hander
+                    approaching the final chicane, requires absolute precision
+                    at speeds over 300km/h.
+                  </li>
+                  <li>
+                    <strong>Bus Stop Chicane:</strong> Final chicane before the
+                    start/finish straight, crucial for overtaking and lap times.
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="spa-drs">
+                <ul>
+                  <li>
+                    <strong>Zone 1:</strong> After Turn 5 to Turn 6 (800 meters)
+                  </li>
+                  <li>
+                    <strong>Zone 2:</strong> After Turn 19 to Turn 1 (950
+                    meters)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Silverstone Circuit Section -->
+      <div class="circuit-section hidden" id="silverstone-section">
+        <div class="grid">
+          <div class="card md:col-span-2">
+            <div class="card-header">
+              <div class="card-title">Silverstone Circuit</div>
+            </div>
+            <div class="card-content">
+              <div class="circuit-image">
+                <img
+                  src="circuits/Circuit_Silverstone.png"
+                  alt="Silverstone Circuit map"
+                />
+              </div>
+              <p class="mt-4 text-left">
+                Silverstone hosted the first-ever Formula One World Championship
+                race in 1950 and remains one of the fastest circuits on the
+                calendar. Originally a World War II airfield, it has evolved
+                into one of the most prestigious venues in motorsport.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Circuit Details</div>
+            </div>
+            <div class="card-content">
+              <div class="tabs">
+                <div class="tab active" data-tab="silverstone-info">Info</div>
+                <div class="tab" data-tab="silverstone-features">Features</div>
+                <div class="tab" data-tab="silverstone-drs">DRS</div>
+              </div>
+
+              <div class="tab-content active" id="silverstone-info">
+                <ul>
+                  <li><strong>Length:</strong> 5.891 km</li>
+                  <li><strong>Turns:</strong> 18</li>
+                  <li>
+                    <strong>Lap Record:</strong> 1:27.097 - Max Verstappen
+                    (2020)
+                  </li>
+                  <li><strong>Average Speed:</strong> 237 km/h</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="silverstone-features">
+                <ul>
+                  <li>
+                    <strong>Copse:</strong> Ultra-fast right-hander taken at
+                    around 290km/h in qualifying, one of the fastest corners in
+                    F1.
+                  </li>
+                  <li>
+                    <strong>Maggotts-Becketts-Chapel:</strong> High-speed
+                    sequence of direction changes that tests car and driver to
+                    the limit. Considered one of F1's most technical sections.
+                  </li>
+                  <li>
+                    <strong>Stowe:</strong> Fast right-hander at the end of the
+                    Hangar Straight, offering overtaking opportunities under
+                    braking.
+                  </li>
+                  <li>
+                    <strong>Vale and Club:</strong> Technical complex leading
+                    onto the start/finish straight, crucial for maintaining
+                    momentum.
+                  </li>
+                  <li>
+                    <strong>Abbey:</strong> High-speed first corner that sets up
+                    the entire lap, taken almost flat out in modern F1 cars.
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="silverstone-drs">
+                <ul>
+                  <li>
+                    <strong>Zone 1:</strong> After Turn 5 to Turn 6 (720 meters)
+                  </li>
+                  <li>
+                    <strong>Zone 2:</strong> After Turn 14 to Turn 15 (830
+                    meters)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="bg-gray-800 py-6 mt-auto">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 F1 News. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 F1 News. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script>
-        // Simplified JavaScript just for handling button clicks and tab switching
-        document.querySelectorAll('.circuit-buttons .button').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const circuitId = e.target.dataset.circuit;
-                
-                // Update active button
-                document.querySelectorAll('.circuit-buttons .button').forEach(btn => 
-                    btn.classList.remove('active'));
-                e.target.classList.add('active');
-                
-                // Show selected circuit section
-                document.querySelectorAll('.circuit-section').forEach(section => 
-                    section.classList.add('hidden'));
-                document.getElementById(`${circuitId}-section`).classList.remove('hidden');
-            });
-        });
-
-        // Tab switching
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                const tabsContainer = e.target.closest('.tabs').parentElement;
-                const tabId = e.target.dataset.tab;
-                
-                // Update active tab
-                tabsContainer.querySelectorAll('.tab').forEach(t => 
-                    t.classList.remove('active'));
-                e.target.classList.add('active');
-                
-                // Update active content
-                tabsContainer.querySelectorAll('.tab-content').forEach(content => 
-                    content.classList.remove('active'));
-                tabsContainer.querySelector(`#${tabId}`).classList.add('active');
-            });
-        });
-    </script>
-</body>
-</html> 
+    <script src="jsCircuits.js"></script>
+  </body>
+</html>
