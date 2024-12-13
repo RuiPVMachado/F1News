@@ -1,361 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F1 Fan Hub - Pilots</title>
-    <meta name="description" content="Explore profiles of current Formula 1 drivers on F1 Fan Hub.">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="min-h-screen bg-gray-900 text-white">
+    <meta
+      name="description"
+      content="Explore profiles of current Formula 1 drivers on F1 Fan Hub."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-gray-900 text-white">
     <header class="bg-red-600 p-4">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="home.html" class="text-2xl font-bold">F1 News</a>
-            <div class="space-x-4">
-                <a href="home.html" class="hover:text-gray-200">Home</a>
-                <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
-                <a href="standings.html" class="hover:text-gray-200">Standings</a>
-                <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
-                <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto flex justify-between items-center">
+        <a href="home.html" class="text-2xl font-bold">F1 News</a>
+        <div class="space-x-4">
+          <a href="home.html" class="hover:text-gray-200">Home</a>
+          <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
+          <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
+          <a href="standings.html" class="hover:text-gray-200">Standings</a>
+          <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
+          <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
+        </div>
+      </nav>
     </header>
 
     <main class="container mx-auto mt-8 px-4">
-        <h1 class="text-3xl font-bold mb-8">F1 Pilots</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="pilots-grid">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">
-                        <span>Max Verstappen</span>
-                        <span style="color: #ef4444;">#1</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="pilot-image">
-                        <img src="pilots/verstappen.png" alt="Max Verstappen portrait">
-                    </div>
-                    <p class="pilot-team">Red Bull Racing</p>
-                    <p class="pilot-bio">A two-time world champion and top Red Bull driver, under contract until 2028.</p>
-                </div>
+      <h1 class="text-3xl font-bold mb-8">F1 Pilots</h1>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        id="pilots-grid"
+      >
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>Max Verstappen</span>
+              <span style="color: #ef4444">#1</span>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">
-                        <span>Sergio Perez</span>
-                        <span style="color: #ef4444;">#11</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="pilot-image">
-                        <img src="pilots/perez.png" alt="Sergio Perez portrait">
-                    </div>
-                    <p class="pilot-team">Red Bull Racing</p>
-                    <p class="pilot-bio">Experienced driver, ending contract in 2024, hoping for a strong year alongside Verstappen.</p>
-                </div>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/verstappen.png" alt="Max Verstappen portrait" />
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">
-                        <span>Lewis Hamilton</span>
-                        <span style="color: #ef4444;">#44</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="pilot-image">
-                        <img src="pilots/hamilton.png" alt="Lewis Hamilton portrait">
-                    </div>
-                    <p class="pilot-team">Mercedes</p>
-                    <p class="pilot-bio">A seven-time champion, set to leave Mercedes after 2024 for Ferrari.</p>
-                </div>
+            <p class="pilot-team">Red Bull Racing</p>
+            <p class="pilot-bio">
+              A two-time world champion and top Red Bull driver, under contract
+              until 2028.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>Sergio Perez</span>
+              <span style="color: #ef4444">#11</span>
             </div>
-            <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>George Russell</span>
-                    <span style="color: #ef4444;">#63</span>
-                </div>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/perez.png" alt="Sergio Perez portrait" />
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/russell.png" alt="George Russell portrait">
-                </div>
-                <p class="pilot-team">Mercedes</p>
-                <p class="pilot-bio">Contracted through 2025, looking to elevate Mercedes back to the top.</p>
+            <p class="pilot-team">Red Bull Racing</p>
+            <p class="pilot-bio">
+              Experienced driver, ending contract in 2024, hoping for a strong
+              year alongside Verstappen.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>Lewis Hamilton</span>
+              <span style="color: #ef4444">#44</span>
             </div>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/hamilton.png" alt="Lewis Hamilton portrait" />
+            </div>
+            <p class="pilot-team">Mercedes</p>
+            <p class="pilot-bio">
+              A seven-time champion, set to leave Mercedes after 2024 for
+              Ferrari.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>George Russell</span>
+              <span style="color: #ef4444">#63</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/russell.png" alt="George Russell portrait" />
+            </div>
+            <p class="pilot-team">Mercedes</p>
+            <p class="pilot-bio">
+              Contracted through 2025, looking to elevate Mercedes back to the
+              top.
+            </p>
+          </div>
         </div>
 
         <!-- Charles Leclerc -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Charles Leclerc</span>
-                    <span style="color: #ef4444;">#16</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Charles Leclerc</span>
+              <span style="color: #ef4444">#16</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/leclerc.png" alt="Charles Leclerc portrait">
-                </div>
-                <p class="pilot-team">Ferrari</p>
-                <p class="pilot-bio">Contract through 2024, a top contender known for his speed and resilience.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/leclerc.png" alt="Charles Leclerc portrait" />
             </div>
+            <p class="pilot-team">Ferrari</p>
+            <p class="pilot-bio">
+              Contract through 2024, a top contender known for his speed and
+              resilience.
+            </p>
+          </div>
         </div>
 
         <!-- Carlos Sainz -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Carlos Sainz</span>
-                    <span style="color: #ef4444;">#55</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Carlos Sainz</span>
+              <span style="color: #ef4444">#55</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/sainz.png" alt="Carlos Sainz portrait">
-                </div>
-                <p class="pilot-team">Ferrari</p>
-                <p class="pilot-bio">Ends 2024 with Ferrari, known for consistency and race-winning ability.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/sainz.png" alt="Carlos Sainz portrait" />
             </div>
+            <p class="pilot-team">Ferrari</p>
+            <p class="pilot-bio">
+              Ends 2024 with Ferrari, known for consistency and race-winning
+              ability.
+            </p>
+          </div>
         </div>
 
         <!-- Lando Norris -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Lando Norris</span>
-                    <span style="color: #ef4444;">#4</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Lando Norris</span>
+              <span style="color: #ef4444">#4</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/norris.png" alt="Lando Norris portrait">
-                </div>
-                <p class="pilot-team">McLaren</p>
-                <p class="pilot-bio">A fan favorite with impressive skills, contracted until 2025.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/norris.png" alt="Lando Norris portrait" />
             </div>
+            <p class="pilot-team">McLaren</p>
+            <p class="pilot-bio">
+              A fan favorite with impressive skills, contracted until 2025.
+            </p>
+          </div>
         </div>
 
         <!-- Oscar Piastri -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Oscar Piastri</span>
-                    <span style="color: #ef4444;">#81</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Oscar Piastri</span>
+              <span style="color: #ef4444">#81</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/piastri.png" alt="Oscar Piastri portrait">
-                </div>
-                <p class="pilot-team">McLaren</p>
-                <p class="pilot-bio">Rookie sensation, contract runs to 2026 after strong performances in 2023.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/piastri.png" alt="Oscar Piastri portrait" />
             </div>
+            <p class="pilot-team">McLaren</p>
+            <p class="pilot-bio">
+              Rookie sensation, contract runs to 2026 after strong performances
+              in 2023.
+            </p>
+          </div>
         </div>
 
         <!-- Esteban Ocon -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Esteban Ocon</span>
-                    <span style="color: #ef4444;">#31</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Esteban Ocon</span>
+              <span style="color: #ef4444">#31</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/ocon.png" alt="Esteban Ocon portrait">
-                </div>
-                <p class="pilot-team">Alpine</p>
-                <p class="pilot-bio">French driver staying through 2024, part of a solid Alpine lineup.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/ocon.png" alt="Esteban Ocon portrait" />
             </div>
+            <p class="pilot-team">Alpine</p>
+            <p class="pilot-bio">
+              French driver staying through 2024, part of a solid Alpine lineup.
+            </p>
+          </div>
         </div>
 
         <!-- Pierre Gasly -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Pierre Gasly</span>
-                    <span style="color: #ef4444;">#10</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Pierre Gasly</span>
+              <span style="color: #ef4444">#10</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/gasly.png" alt="Pierre Gasly portrait">
-                </div>
-                <p class="pilot-team">Alpine</p>
-                <p class="pilot-bio">A talented driver, ending contract in 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/gasly.png" alt="Pierre Gasly portrait" />
             </div>
+            <p class="pilot-team">Alpine</p>
+            <p class="pilot-bio">A talented driver, ending contract in 2024.</p>
+          </div>
         </div>
 
         <!-- Fernando Alonso -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Fernando Alonso</span>
-                    <span style="color: #ef4444;">#14</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Fernando Alonso</span>
+              <span style="color: #ef4444">#14</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/alonso.png" alt="Fernando Alonso portrait">
-                </div>
-                <p class="pilot-team">Aston Martin</p>
-                <p class="pilot-bio">Seasoned F1 veteran, contract through 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/alonso.png" alt="Fernando Alonso portrait" />
             </div>
+            <p class="pilot-team">Aston Martin</p>
+            <p class="pilot-bio">Seasoned F1 veteran, contract through 2024.</p>
+          </div>
         </div>
 
         <!-- Lance Stroll -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Lance Stroll</span>
-                    <span style="color: #ef4444;">#18</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Lance Stroll</span>
+              <span style="color: #ef4444">#18</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/stroll.png" alt="Lance Stroll portrait">
-                </div>
-                <p class="pilot-team">Aston Martin</p>
-                <p class="pilot-bio">Racing on a multi-year contract, son of team owner Lawrence Stroll.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/stroll.png" alt="Lance Stroll portrait" />
             </div>
+            <p class="pilot-team">Aston Martin</p>
+            <p class="pilot-bio">
+              Racing on a multi-year contract, son of team owner Lawrence
+              Stroll.
+            </p>
+          </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Yuki Tsunoda</span>
-                    <span style="color: #ef4444;">#22</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Yuki Tsunoda</span>
+              <span style="color: #ef4444">#22</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/tsunoda.png" alt="Yuki Tsunoda portrait">
-                </div>
-                <p class="pilot-team">AlphaTauri (Red Bull)</p>
-                <p class="pilot-bio">Exciting driver from Japan, ending contract in 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/tsunoda.png" alt="Yuki Tsunoda portrait" />
             </div>
+            <p class="pilot-team">AlphaTauri (Red Bull)</p>
+            <p class="pilot-bio">
+              Exciting driver from Japan, ending contract in 2024.
+            </p>
+          </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Daniel Ricciardo</span>
-                    <span style="color: #ef4444;">#3</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Daniel Ricciardo</span>
+              <span style="color: #ef4444">#3</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/ricciardo.png" alt="Daniel Ricciardo portrait">
-                </div>
-                <p class="pilot-team">AlphaTauri (Red Bull)</p>
-                <p class="pilot-bio">Veteran back on the grid, aiming to impress for a possible return to top teams.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/ricciardo.png" alt="Daniel Ricciardo portrait" />
             </div>
+            <p class="pilot-team">AlphaTauri (Red Bull)</p>
+            <p class="pilot-bio">
+              Veteran back on the grid, aiming to impress for a possible return
+              to top teams.
+            </p>
+          </div>
         </div>
 
         <!-- Sauber (Kick) Drivers -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Valtteri Bottas</span>
-                    <span style="color: #ef4444;">#77</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Valtteri Bottas</span>
+              <span style="color: #ef4444">#77</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/bottas.png" alt="Valtteri Bottas portrait">
-                </div>
-                <p class="pilot-team">Sauber (Kick)</p>
-                <p class="pilot-bio">Experienced driver, contracted through 2025.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/bottas.png" alt="Valtteri Bottas portrait" />
             </div>
+            <p class="pilot-team">Sauber (Kick)</p>
+            <p class="pilot-bio">
+              Experienced driver, contracted through 2025.
+            </p>
+          </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Zhou Guanyu</span>
-                    <span style="color: #ef4444;">#24</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Zhou Guanyu</span>
+              <span style="color: #ef4444">#24</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/zhou.png" alt="Zhou Guanyu portrait">
-                </div>
-                <p class="pilot-team">Sauber (Kick)</p>
-                <p class="pilot-bio">China’s F1 star, staying with Sauber through 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/zhou.png" alt="Zhou Guanyu portrait" />
             </div>
+            <p class="pilot-team">Sauber (Kick)</p>
+            <p class="pilot-bio">
+              China’s F1 star, staying with Sauber through 2024.
+            </p>
+          </div>
         </div>
 
         <!-- Haas Drivers -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Kevin Magnussen</span>
-                    <span style="color: #ef4444;">#20</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Kevin Magnussen</span>
+              <span style="color: #ef4444">#20</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/magnussen.png" alt="Kevin Magnussen portrait">
-                </div>
-                <p class="pilot-team">Haas</p>
-                <p class="pilot-bio">Veteran racer, under contract until the end of 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/magnussen.png" alt="Kevin Magnussen portrait" />
             </div>
+            <p class="pilot-team">Haas</p>
+            <p class="pilot-bio">
+              Veteran racer, under contract until the end of 2024.
+            </p>
+          </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Nico Hulkenberg</span>
-                    <span style="color: #ef4444;">#27</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Nico Hulkenberg</span>
+              <span style="color: #ef4444">#27</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/hulkenberg.png" alt="Nico Hulkenberg portrait">
-                </div>
-                <p class="pilot-team">Haas</p>
-                <p class="pilot-bio">Another experienced driver, also contracted through 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/hulkenberg.png" alt="Nico Hulkenberg portrait" />
             </div>
+            <p class="pilot-team">Haas</p>
+            <p class="pilot-bio">
+              Another experienced driver, also contracted through 2024.
+            </p>
+          </div>
         </div>
 
         <!-- Williams Drivers -->
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Alex Albon</span>
-                    <span style="color: #ef4444;">#23</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Alex Albon</span>
+              <span style="color: #ef4444">#23</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/albon.png" alt="Alex Albon portrait">
-                </div>
-                <p class="pilot-team">Williams</p>
-                <p class="pilot-bio">A promising talent, ending contract in 2024.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/albon.png" alt="Alex Albon portrait" />
             </div>
+            <p class="pilot-team">Williams</p>
+            <p class="pilot-bio">
+              A promising talent, ending contract in 2024.
+            </p>
+          </div>
         </div>
         <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <span>Logan Sargeant</span>
-                    <span style="color: #ef4444;">#2</span>
-                </div>
+          <div class="card-header">
+            <div class="card-title">
+              <span>Logan Sargeant</span>
+              <span style="color: #ef4444">#2</span>
             </div>
-            <div class="card-content">
-                <div class="pilot-image">
-                    <img src="pilots/sargeant.png" alt="Logan Sargeant portrait">
-                </div>
-                <p class="pilot-team">Williams</p>
-                <p class="pilot-bio">Rookie from the U.S., hoping to make a strong impression in his second year.</p>
+          </div>
+          <div class="card-content">
+            <div class="pilot-image">
+              <img src="pilots/sargeant.png" alt="Logan Sargeant portrait" />
             </div>
+            <p class="pilot-team">Williams</p>
+            <p class="pilot-bio">
+              Rookie from the U.S., hoping to make a strong impression in his
+              second year.
+            </p>
+          </div>
         </div>
-           
-        </div>
+      </div>
     </main>
 
     <footer class="bg-gray-800 py-6 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 F1 News. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 F1 News. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="js.js"></script>
-</body>
+  </body>
 </html>

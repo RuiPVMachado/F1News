@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F1 Fan Hub - Standings</title>
-    <meta name="description" content="View current F1 championship standings for drivers and constructors.">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="min-h-screen bg-gray-900 text-white">
+    <meta
+      name="description"
+      content="View current F1 championship standings for drivers and constructors."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="min-h-screen bg-gray-900 text-white">
     <header class="bg-red-600 p-4">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="home.html" class="text-2xl font-bold">F1 News</a>
-            <div class="space-x-4">
-                <a href="home.html" class="hover:text-gray-200">Home</a>
-                <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
-                <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
-                <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
-                <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
-            </div>
-        </nav>
+      <nav class="container mx-auto flex justify-between items-center">
+        <a href="home.html" class="text-2xl font-bold">F1 News</a>
+        <div class="space-x-4">
+          <a href="home.html" class="hover:text-gray-200">Home</a>
+          <a href="schedule.html" class="hover:text-gray-200">Race Schedule</a>
+          <a href="pilots.html" class="hover:text-gray-200">F1 Pilots</a>
+          <a href="standings.html" class="hover:text-gray-200">Standings</a>
+          <a href="graphics.html" class="hover:text-gray-200">Graphics</a>
+          <a href="circuits.html" class="hover:text-gray-200">Circuits</a>
+        </div>
+      </nav>
     </header>
 
     <main class="container mx-auto mt-8 px-4">
-        <h1 class="text-3xl font-bold mb-8">F1 Season Standings</h1>
+      <h1 class="text-3xl font-bold mb-8">F1 Season Standings</h1>
 
-        <div class="tabs">
-            <div class="tab active" data-tab="drivers">Driver Standings</div>
-            <div class="tab" data-tab="constructors">Constructor Standings</div>
-        </div>
+      <div class="tabs">
+        <div class="tab active" data-tab="drivers">Driver Standings</div>
+        <div class="tab" data-tab="constructors">Constructor Standings</div>
+      </div>
 
-        <div id="drivers" class="tab-content active">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">Driver Championship Standings</div>
-                </div>
-                <div class="card-content">
-                    <table class="standings-table">
-                        <thead>
-                            <tr>
-                                <th class="w-[100px]">Position</th>
-                                <th>Driver</th>
-                                <th>Team</th>
-                                <th class="text-right">Points</th>
-                            </tr>
-                        </thead>
-                        <tbody id="driver-standings">
-                            <!-- Driver standings will be populated by JavaScript -->
-                            <tr>
-                                <td colspan="4" class="loading">Loading...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <div id="drivers" class="tab-content active">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Driver Championship Standings</div>
+          </div>
+          <div class="card-content">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th class="w-[100px]">Position</th>
+                  <th>Driver</th>
+                  <th>Team</th>
+                  <th class="text-right">Points</th>
+                </tr>
+              </thead>
+              <tbody id="driver-standings">
+                <!-- Driver standings will be populated by JavaScript -->
+                <tr>
+                  <td colspan="4" class="loading">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
 
-        <div id="constructors" class="tab-content">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">Constructor Championship Standings</div>
-                </div>
-                <div class="card-content">
-                    <table class="standings-table">
-                        <thead>
-                            <tr>
-                                <th class="w-[100px]">Position</th>
-                                <th>Team</th>
-                                <th class="text-right">Points</th>
-                            </tr>
-                        </thead>
-                        <tbody id="constructor-standings">
-                            <!-- Constructor standings will be populated by JavaScript -->
-                            <tr>
-                                <td colspan="3" class="loading">Loading...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <div id="constructors" class="tab-content">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Constructor Championship Standings</div>
+          </div>
+          <div class="card-content">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th class="w-[100px]">Position</th>
+                  <th>Team</th>
+                  <th class="text-right">Points</th>
+                </tr>
+              </thead>
+              <tbody id="constructor-standings">
+                <!-- Constructor standings will be populated by JavaScript -->
+                <tr>
+                  <td colspan="3" class="loading">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </main>
 
     <footer class="bg-gray-800 py-6 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2024 F1 News. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 F1 News. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="js.js"></script>
-</body>
-</html> 
+  </body>
+</html>
