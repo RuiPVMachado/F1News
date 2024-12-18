@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { date: "2024-11-03T17:00:00Z", name: "Brazilian Grand Prix", location: "Autódromo José Carlos Pace, São Paulo, Brazil" },
             { date: "2024-11-24T06:00:00Z", name: "Las Vegas Grand Prix", location: "Las Vegas Strip Circuit, Las Vegas, USA" },
             { date: "2024-12-01T13:00:00Z", name: "Abu Dhabi Grand Prix", location: "Yas Marina Circuit, Abu Dhabi, UAE" },
-            { date: "2024-20-01T13:00:00Z", name: "ISLA GAIA", location: "Porto, Gaia" }
+            { date: "2024-12-20T13:00:00Z", name: "ISLA GAIA", location: "Porto, Gaia" }
         ];
 
         function populateRaceSchedule() {
