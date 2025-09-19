@@ -1,0 +1,13 @@
+{
+  "name": "@services/realtime-server",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Realtime WebSocket server (skeleton)",
+  "scripts": {
+    "dev": "echo 'Realtime server placeholder. Implement server and deps to run dev.'",
+    "build": "echo 'Realtime server placeholder build'",
+    "start": "echo 'Realtime server placeholder start'",
+    "lint": "echo 'No lint setup in placeholder'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

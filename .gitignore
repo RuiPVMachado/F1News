@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Output
+build/
+dist/
+.next/
+.nuxt/
+out/
+.vercel/
+.netlify/
+.cache/
+.turbo/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Runtime
+.tmp/
+.temp/
+*.log
+
+# Docker
+*.local
+docker-data/

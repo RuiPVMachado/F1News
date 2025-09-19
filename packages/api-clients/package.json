@@ -1,0 +1,13 @@
+{
+  "name": "@packages/api-clients",
+  "version": "0.0.0",
+  "private": true,
+  "description": "API clients for external services (skeleton)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "echo 'API clients package placeholder'",
+    "lint": "echo 'No lint setup in placeholder'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

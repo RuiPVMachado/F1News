@@ -1,0 +1,13 @@
+{
+  "name": "@services/fastf1-proxy",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Proxy service for FastF1 data (skeleton)",
+  "scripts": {
+    "dev": "echo 'FastF1 proxy placeholder. Implement server and deps to run dev.'",
+    "build": "echo 'FastF1 proxy placeholder build'",
+    "start": "echo 'FastF1 proxy placeholder start'",
+    "lint": "echo 'No lint setup in placeholder'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

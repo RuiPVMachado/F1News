@@ -1,0 +1,13 @@
+{
+  "name": "@apps/next-dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js dashboard app (skeleton)",
+  "scripts": {
+    "dev": "echo 'Next.js app placeholder. Implement app and deps to run dev.'",
+    "build": "echo 'Next.js app placeholder build'",
+    "start": "echo 'Next.js app placeholder start'",
+    "lint": "echo 'No lint setup in placeholder'",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
