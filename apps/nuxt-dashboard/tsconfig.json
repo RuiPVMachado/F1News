@@ -1,0 +1,23 @@
+{
+  "extends": "nuxt/tsconfig",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "composite": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "assets/*": ["./assets/*"],
+      "styles/*": ["./assets/css/*"],
+      "components/*": ["./components/*"],
+      "utils/*": ["./utils/*"]
+    },
+    "types": ["node", "nuxt"],
+    "allowJs": false,
+    "noEmit": true
+  }
+}
