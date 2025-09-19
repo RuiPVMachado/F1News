@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@packages/shared": ["../../packages/shared/src"],
+      "@packages/api-clients": ["../../packages/api-clients/src"]
+    }
+  },
+  "references": [
+    { "path": "../../packages/shared" },
+    { "path": "../../packages/api-clients" }
+  ]
+}
