@@ -1,0 +1,20 @@
+{
+  "name": "@services/realtime-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "ws": "8.18.0"
+  },
+  "devDependencies": {
+    "tsx": "4.19.0",
+    "typescript": "5.5.4",
+    "@types/ws": "8.5.10"
+  }
+}

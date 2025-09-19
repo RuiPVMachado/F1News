@@ -1,0 +1,48 @@
+# Node / PNPM
+node_modules/
+.pnpm-store/
+.pnp.*
+shrinkwrap.yaml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Build output
+.next/
+.out/
+.output/
+dist/
+coverage/
+.nuxt/
+.cache/
+.temp/
+
+# Env
+.env
+.env.*
+
+# Typescript
+*.tsbuildinfo
+
+# OS / Misc
+Thumbs.db
+
+# Python (services/fastf1-proxy)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env.python
+
+# Legacy static site artifacts
+legacy/**/.cache

@@ -1,0 +1,21 @@
+{
+  "name": "f1-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Polyglot monorepo hosting Next.js and Nuxt apps, shared libs, and services",
+  "license": "MIT",
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter @apps/next-dashboard --filter @apps/nuxt-dashboard --filter @services/realtime-server dev",
+    "dev:next": "pnpm --filter @apps/next-dashboard dev",
+    "dev:nuxt": "pnpm --filter @apps/nuxt-dashboard dev",
+    "dev:realtime": "pnpm --filter @services/realtime-server dev",
+    "build": "pnpm -r --filter ./packages/* --filter @apps/next-dashboard --filter @apps/nuxt-dashboard --filter @services/realtime-server build",
+    "lint": "echo 'No root lint configured'",
+    "typecheck": "echo 'No root typecheck configured'"
+  }
+}

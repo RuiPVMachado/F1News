@@ -1,0 +1,21 @@
+{
+  "name": "@apps/nuxt-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "nuxt dev -p 3001",
+    "build": "nuxt build",
+    "start": "nuxt start -p 3001",
+    "lint": "echo 'No lint configured for nuxt-dashboard'",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "nuxt": "3.12.4",
+    "@packages/shared": "workspace:*",
+    "@packages/api-clients": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4",
+    "eslint": "8.57.0"
+  }
+}
